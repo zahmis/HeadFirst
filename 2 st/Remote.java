@@ -17,7 +17,7 @@ public class Remote {
       door.open();
 
       final Timer timer = new Timer();
-      timer.schedule(new TimerTask() {
+      timer.schedule(new TimerTask() { // schedule(TimerTask task, long delay)
         public void run() {
           door.close();
           timer.cancel();
