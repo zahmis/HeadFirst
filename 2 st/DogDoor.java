@@ -1,12 +1,25 @@
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
+
 
 public class DogDoor {
 
   private boolean open;
+  private List<Bark> allowedBarks;
 
   public DogDoor() {
+    this.allowedBarks = new LinkedList<>();
     this.open = false;
+  }
+
+  public void addAllowedBark(Bark bark){
+    allowedBarks.add(bark);
+  }
+
+  public List<Bark> getAllowedBarks(){
+    return allowedBarks;
   }
 
   public void open() {
@@ -30,5 +43,6 @@ public class DogDoor {
 
   public boolean isOpen() {
     return open;                      
-  }                  
+  }
+
 }
