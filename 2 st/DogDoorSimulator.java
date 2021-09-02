@@ -10,9 +10,9 @@ public class DogDoorSimulator {
     // Remote remote = new Remote(door);
 
     // ブルースが吠え始める
-    System.out.println("Bruce starts barking.");
+    System.out.println("Bruce 吠え始め 1回目");
     recognizer.recognize(new Bark("ouououou"));
-    System.out.println("\nBruce has gone outside...");
+    System.out.println("\nBruce 外に出る...");
 
 
     try {
@@ -20,12 +20,12 @@ public class DogDoorSimulator {
       Thread.sleep(10000);
     } catch (InterruptedException e) { }
 
-    System.out.println("\nBruce all done...");
-    System.out.println("...but he's stuck outside!");
+    System.out.println("\nBruce 全て用事済ます...");
+    System.out.println("...でもまだ外におる!");
 
      // 偽物が来る
      Bark smallDogBark = new Bark("yip");
-     System.out.println("A small dog starts barking.");
+     System.out.println("偽物襲来.");
      recognizer.recognize(smallDogBark); 
 
      try {
@@ -34,10 +34,10 @@ public class DogDoorSimulator {
     } catch (InterruptedException e) { }
 
     // ブルース戻ってきて吠える
-    System.out.println("\nBruce starts barking.");
+    System.out.println("\nBruce 吠え始める 2 回目");
     recognizer.recognize(new Bark("wanwan"));
 
-    System.out.println("\nBruce's back inside...");
+    System.out.println("\nBruce's 中に入る");
 
 
   }
