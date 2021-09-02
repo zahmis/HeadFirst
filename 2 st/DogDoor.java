@@ -26,7 +26,7 @@ public class DogDoor {
     System.out.println("The dog door opens.");
     open = true;
 
-    // 委譲
+    // 委譲された。時間が経つとドアが閉まるのは、ドアの責務
     final Timer timer = new Timer();
     timer.schedule(new TimerTask() {
       public void run() {
