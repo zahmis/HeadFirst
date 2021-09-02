@@ -13,8 +13,10 @@ public class BarkRecognizer {
       System.out.println("   BarkRecognizer: Heard a '" +
           bark + "'");
       
+      // 認可された鳴き声を取得    
       List<Bark> allowedBarks = door.getAllowedBarks();
 
+      // 鳴き声と比較 ループ処理
       for (Iterator<Bark> i = allowedBarks.iterator(); i.hasNext(); ) {
         Bark allowedBark = (Bark)i.next();
 
