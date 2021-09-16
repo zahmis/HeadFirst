@@ -19,6 +19,7 @@ public class MandolinSpec extends InstrumentSpec {
       if(!(otherSpec instanceof GuitarSpec)){
         return false;
         }
+      MandolinSpec spec = (MandolinSpec)otherSpec;
       if(!style.equals(spec.style)) return false;
       
       return true;

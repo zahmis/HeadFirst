@@ -2,7 +2,8 @@ public abstract class InstrumentSpec{
     private Builder builder;
     private String model;
     private Type type;
-    private Wood wood;
+    private Wood backwood;
+    private Wood topwWood;
 
     public InstrumentSpec(Builder builder, String model, Type type, Wood backWood,Wood topWood){
         this.builder = builder;

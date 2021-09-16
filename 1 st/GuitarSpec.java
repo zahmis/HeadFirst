@@ -19,6 +19,7 @@ public class GuitarSpec extends InstrumentSpec{
       if(!(otherSpec instanceof GuitarSpec)){
         return false;
       }
+      GuitarSpec spec = (GuitarSpec)otherSpec;
       if(numStrings != spec.numStrings) return false;
       
       return true;

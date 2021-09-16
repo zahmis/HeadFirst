@@ -9,7 +9,7 @@ public class Inventory {
     inventory = new LinkedList();
   }
 
-  public void addInstrument(String serialNumber, double price, GuitarSpec spec) {
+  public void addInstrument(String serialNumber, double price, InstrumentSpec spec) {
     Instrument instrument = null;
 
     if(spec instanceof GuitarSpec){
@@ -41,13 +41,13 @@ public class Inventory {
     return matchingGuitars;
   }
 
-  public List search(MandlinSpec searchSpec) {
-    List matchingMandlins = new LinkedList();
+  public List search(MandolinSpec searchSpec) {
+    List matchingMandolins = new LinkedList();
     for (Iterator i = Inventory.iterator(); i.hasNext(); ) {
-      Mandlin mandlin = (Mandlin)i.next();
+      Mandolin mandlin = (Mandolin)i.next();
       if (mandlin.getSpec().matches(searchSpec))
-        matchingMandlins.add(mandlin);
+        matchingMandolins.add(mandlin);
     }
-    return matchingGuitars;
+    return matchingMandolins;
   }
 }
